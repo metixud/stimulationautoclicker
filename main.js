@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Stimulation Autoclicker ( metix )
 // @namespace    https://neal.fun/
-// @version      1.3
+// @version      1.4
 // @description  Stimulation autoclicker made by metix
 // @author       Metix
 // @match        https://neal.fun/stimulation-clicker/
@@ -22,7 +22,6 @@
     };
 
     let i = true;
-    let j = 0;
     let k = Date.now();
     let l = null;
     let m = 0;
@@ -49,8 +48,6 @@
             } else {
                 p.click();
             }
-
-            j++;
         }
     }
 
@@ -85,8 +82,6 @@
         u.innerHTML = `
             <div style="margin-bottom: 5px; font-weight: bold;">Stimulation Clicker Autoclicker</div>
             <div id="status">Status: Active</div>
-            <div id="clicks">Clicks: 0</div>
-            <div id="cps">Speed: 0 clicks/sec</div>
             <button id="toggleBtn" style="margin-top: 5px; padding: 3px 6px; background: #4CAF50; color: white; border: none; border-radius: 3px; cursor: pointer;">Pause</button>
         `;
 
@@ -121,7 +116,7 @@
     }
 
     function x() {
-        const y = t();
+        t();
 
         if (a.f) {
             requestAnimationFrame(w);
