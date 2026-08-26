@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Stimulation Autoclicker ( metix )
 // @namespace    https://neal.fun/
-// @version      1.4
+// @version      1.5
 // @description  Stimulation autoclicker made by metix
 // @author       Metix
 // @match        https://neal.fun/stimulation-clicker/
@@ -22,9 +22,7 @@
     };
 
     let i = true;
-    let k = Date.now();
     let l = null;
-    let m = 0;
 
     function n() {
         if (!l) {
@@ -99,8 +97,6 @@
 
             v.style.background = i ? '#4CAF50' : '#f44336';
         });
-
-        return u;
     }
 
     function w() {
@@ -108,21 +104,12 @@
             r();
         }
 
-        if (a.f) {
-            requestAnimationFrame(w);
-        } else {
-            setTimeout(w, 0);
-        }
+        requestAnimationFrame(w);
     }
 
     function x() {
         t();
-
-        if (a.f) {
-            requestAnimationFrame(w);
-        } else {
-            setTimeout(w, 0);
-        }
+        requestAnimationFrame(w);
     }
 
     if (document.readyState === 'loading') {
